@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#1a5bbf">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="새한견적서">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="/Quotation/manifest.json">
+<link rel="apple-touch-icon" href="/Quotation/icon-192.png">
 <title>새한패키지 견적서</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -568,7 +568,18 @@ document.getElementById('iBtnNo').addEventListener('click',function(){
   document.getElementById('iBanner').style.display='none';
 });
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js').then(function(){
+  // 캐시 초기화
+  caches.keys().then(function(keys){keys.forEach(function(k){caches.delete(k);});});
+  navigator.serviceWorker.register('/Quotation/sw.js',{scope:'/Quotation/'}).then(function(){
+    console.log('SW 등록 완료');
+  }).catch(function(e){console.log('SW 오류',e);});
+});
+  });
+  // 캐시 전체 삭제
+  caches.keys().then(function(keys){
+    keys.forEach(function(k){caches.delete(k);});
+  });
+  navigator.serviceWorker.register('./sw.js', {scope: './'}).then(function(){
     console.log('SW OK');
   }).catch(function(e){console.log('SW err',e);});
 }
