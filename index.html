@@ -11,8 +11,8 @@
 <title>새한패키지 견적서</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4edf4;color:#1a2340;font-size:13px}
-:root{--bl:#1a5bbf;--gr:#3aaa3a;--lt:#f5f8ff;--bd:#cddaf0;--t2:#3a4e72;--t3:#7a90b8}
+body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4edf4;color:#000;font-size:13px}
+:root{--bl:#1a5bbf;--gr:#3aaa3a;--lt:#f5f8ff;--bd:#cddaf0;--t2:#111827;--t3:#374151}
 
 /* 헤더 */
 .hdr{background:#fff;border-bottom:3px solid var(--bd);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(26,91,191,.1)}
@@ -61,15 +61,15 @@ body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4
 .badd{width:100%;padding:8px;background:#fff;border:2px dashed var(--gr);border-radius:7px;color:var(--gr);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:2px}
 
 /* A4 종이 */
-.paper{background:#fff;width:794px;min-height:1123px;margin:0 auto;box-shadow:0 6px 30px rgba(26,91,191,.2);display:flex;flex-direction:column;border-top:5px solid var(--gr);transform-origin:top center}
+.paper{background:#fff;width:794px;min-height:1123px;margin:0 auto;box-shadow:0 6px 30px rgba(26,91,191,.2);display:flex;flex-direction:column;border-top:5px solid var(--gr);transform-origin:top center;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:500}
 
 /* 견적서 헤더 */
 .ph{background:#fff;border-bottom:2px solid var(--bd);padding:20px 32px 0}
 .ph-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
-.ph-info{font-size:10px;color:var(--t3);line-height:2}
+.ph-info{font-size:10px;color:#333;line-height:2;font-weight:600}
 .ph-info strong{color:var(--t2);font-weight:700}
 .ph-badge{background:var(--lt);border:1.5px solid var(--bd);border-radius:8px;padding:8px 14px;text-align:right;flex-shrink:0}
-.ph-badge div{font-size:11px;color:var(--t2);line-height:2}
+.ph-badge div{font-size:11px;color:#111;line-height:2;font-weight:700}
 .ph-badge strong{color:var(--bl);font-weight:700}
 .ph-title{text-align:center;font-size:36px;font-weight:900;letter-spacing:14px;color:var(--bl);padding:16px 0 18px;border-top:1px solid var(--bd);-webkit-text-stroke:.5px var(--bl)}
 
@@ -79,7 +79,7 @@ body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4
 .tobox{flex:1;border:1.5px solid var(--bd);border-radius:9px;padding:12px 15px;background:#fafcff;border-left:4px solid var(--bl)}
 .tolbl{font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--t3);margin-bottom:5px;text-transform:uppercase}
 .tonm{font-size:16px;font-weight:800;margin-bottom:3px}
-.todt{font-size:11px;color:var(--t2);line-height:1.9}
+.todt{font-size:11px;color:#111;line-height:1.9;font-weight:600}
 .badge{background:linear-gradient(145deg,var(--bl),#1478c8);color:#fff;border-radius:9px;padding:12px 18px;text-align:center;min-width:138px;display:flex;flex-direction:column;justify-content:center}
 .badge-lb{font-size:9px;color:rgba(255,255,255,.6);letter-spacing:1px;margin-bottom:3px}
 .badge-am{font-size:19px;font-weight:900;color:#fff}
@@ -93,11 +93,11 @@ thead th{padding:8px 10px;font-size:10px;font-weight:800;text-align:left;backgro
 thead th:first-child{border-radius:6px 0 0 6px}
 thead th:last-child{border-radius:0 6px 6px 0;text-align:right}
 tbody tr{border-bottom:1px solid #eef3ff}
-tbody td{padding:9px 10px;vertical-align:middle}
+tbody td{padding:9px 10px;vertical-align:middle;font-weight:600;color:#111}
 tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
 .tno{color:var(--t3);font-size:10px;width:26px}
-.tnm{font-weight:700;font-size:12px}
-.tsp{color:var(--t3);font-size:10px;margin-top:1px}
+.tnm{font-weight:800;font-size:12px;color:#000}
+.tsp{color:#555;font-size:10px;margin-top:1px;font-weight:600}
 .tc{text-align:center!important;color:var(--t2)}
 
 /* 합계 */
@@ -105,21 +105,21 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
 .sumt{min-width:210px;border:1.5px solid var(--bd);border-radius:8px;overflow:hidden;font-size:12px}
 .sr{display:flex;justify-content:space-between;gap:18px;padding:6px 12px;border-bottom:1px solid #eef3ff}
 .sr:last-child{border:none;background:linear-gradient(135deg,var(--bl),#1478c8);padding:9px 12px}
-.sr .lb2{color:var(--t2)}
-.sr .vl{font-weight:600;color:#1a2340}
-.sr:last-child .lb2{color:rgba(255,255,255,.75);font-size:11px}
+.sr .lb2{color:#111;font-weight:700}
+.sr .vl{font-weight:800;color:#000}
+.sr:last-child .lb2{color:rgba(255,255,255,.85);font-size:11px}
 .sr:last-child .vl{color:#fff;font-size:13px;font-weight:900}
 
 /* 결제조건/비고 */
-.ntit{font-size:9px;font-weight:800;letter-spacing:1.2px;color:var(--t3);text-transform:uppercase;margin-bottom:5px}
-.nbox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--gr);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:var(--t2);line-height:1.9;white-space:pre-wrap;min-height:36px}
-.paybox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:var(--t2);line-height:1.9;min-height:36px;margin-bottom:14px}
+.ntit{font-size:9px;font-weight:800;letter-spacing:1.2px;color:#374151;text-transform:uppercase;margin-bottom:5px}
+.nbox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--gr);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;white-space:pre-wrap;min-height:36px;font-weight:600}
+.paybox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;min-height:36px;margin-bottom:14px;font-weight:600}
 
 /* 하단 */
 .pf{display:flex;justify-content:space-between;align-items:flex-end;padding:14px 32px 20px;margin-top:auto;border-top:1px solid var(--bd);background:linear-gradient(180deg,#fff,#f8faff)}
-.pfv{font-size:10px;color:var(--t3);line-height:2}
-.pfv strong{color:var(--t2);font-size:11px}
-.pfv .pfnote{font-size:9.5px;color:var(--t3);display:block;margin-top:2px}
+.pfv{font-size:10px;color:#333;line-height:2;font-weight:600}
+.pfv strong{color:#111;font-size:11px;font-weight:800}
+.pfv .pfnote{font-size:9.5px;color:#444;display:block;margin-top:2px;font-weight:600}
 .pf-logo{height:96px;width:auto;opacity:.85}
 
 /* 플로팅 합계 */
@@ -152,14 +152,47 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
 /* 인쇄 */
 @media print{
   .hdr,.panel,.mbg,.ft,.toast{display:none!important}
-  body{background:#fff!important}
+  body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .wrap{display:block}
   .prev{padding:0;background:#fff!important;display:block}
-  .paper{width:210mm;min-height:297mm;box-shadow:none!important;margin:0;transform:none!important}
-  thead th{background:#1a5bbf!important;color:#fff!important}
-  .badge{background:#1a5bbf!important}
-  .sr:last-child{background:#1a5bbf!important}
-  @page{size:A4;margin:0}
+  .paper{width:210mm!important;min-height:auto!important;box-shadow:none!important;
+         margin:0!important;transform:none!important;
+         border-top:5px solid #3aaa3a!important;
+         -webkit-print-color-adjust:exact;print-color-adjust:exact;
+         -webkit-font-smoothing:antialiased;font-weight:500}
+
+  /* TOTAL AMOUNT 가로 배치 유지 */
+  .torow{display:flex!important;flex-direction:row!important;gap:12px!important;align-items:stretch!important}
+  .tobox{flex:1!important}
+  .badge{background:linear-gradient(145deg,#1a5bbf,#1478c8)!important;
+         min-width:138px!important;display:flex!important;flex-direction:column!important;
+         justify-content:center!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+  /* ★ 합계 박스 크기 고정 - 인쇄시 커지는 문제 해결 */
+  .sumw{display:flex!important;justify-content:flex-end!important;margin-bottom:16px!important}
+  .sumt{min-width:0!important;width:220px!important;font-size:12px!important;
+        border:1.5px solid #cddaf0!important;border-radius:8px!important;overflow:hidden!important}
+  .sr{display:flex!important;justify-content:space-between!important;
+      gap:18px!important;padding:6px 12px!important;
+      border-bottom:1px solid #eef3ff!important;font-size:12px!important}
+  .sr:last-child{border:none!important;padding:9px 12px!important;
+                 background:linear-gradient(135deg,#1a5bbf,#1478c8)!important;
+                 -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sr .lb2{font-size:12px!important;font-weight:700!important}
+  .sr .vl{font-size:12px!important;font-weight:800!important}
+  .sr:last-child .lb2{font-size:11px!important;color:rgba(255,255,255,.85)!important}
+  .sr:last-child .vl{font-size:13px!important;color:#fff!important;font-weight:900!important}
+
+  /* 색상 */
+  thead th{background:#1a5bbf!important;color:#fff!important;
+           -webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+  /* 비고/결제조건 */
+  .nbox,.paybox{display:block!important;visibility:visible!important;
+                overflow:visible!important;min-height:36px!important}
+  .ntit{display:block!important;visibility:visible!important}
+  .pb,.sumw,.pf{page-break-inside:avoid}
+  @page{size:A4 portrait;margin:8mm}
 }
 
 /* 모바일 */
@@ -187,7 +220,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   <div class="hbtns">
     <button class="hb hb1" onclick="openModal()">&#128065; 미리보기</button>
     <button class="hb hb2" onclick="copyImg()">&#128247; 이미지</button>
-    <button class="hb hb3" onclick="window.print()">&#128424; 인쇄</button>
+    <button class="hb hb3" onclick="printDoc()">&#128424; 인쇄</button>
   </div>
 </div>
 
@@ -262,7 +295,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
           <div class="ph-info">
             <strong>사업자번호:</strong> 127-14-48247 &nbsp;|&nbsp; <strong>대표:</strong> 최세환<br>
             경기도 양주시 은현면 운하로 104-1<br>
-            <strong>TEL:</strong> 031-877-8808 &nbsp;|&nbsp; <strong>FAX:</strong> 031-855-5335 &nbsp;|&nbsp; sehan8808@hanmail.net
+            <strong>TEL:</strong> 031-877-8808 &nbsp;|&nbsp; <strong>FAX:</strong> 031-855-5335 &nbsp;|&nbsp; <a href="mailto:sehan8808@hanmail.net" style="color:#333;text-decoration:none;font-weight:600">sehan8808@hanmail.net</a>
           </div>
           <div class="ph-badge">
             <div id="qMeta"><strong>No.</strong> SH-202604-001<br><strong>Date.</strong> 2026-04-06</div>
@@ -332,7 +365,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
       <div class="mhtit"><div class="mdot"></div>미리보기</div>
       <div class="mhbtns">
         <button class="mb mb1" onclick="copyImg()">&#128247; 이미지</button>
-        <button class="mb mb2" onclick="window.print()">&#128424; 인쇄</button>
+        <button class="mb mb2" onclick="printDoc()">&#128424; 인쇄</button>
         <button class="mb mb1" onclick="closeModal()">&#10005;</button>
       </div>
     </div>
@@ -346,9 +379,10 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 var items=[],idc=0,sym='\u20a9';
+function printDoc(){render();setTimeout(function(){window.print();},200);}
 var SYMS={'KRW':'\u20a9','USD':'$','CNY':'\u00a5','JPY':'\u00a5','EUR':'\u20ac'};
 
 function pad(n){return n<10?'0'+n:''+n;}
@@ -440,8 +474,8 @@ function render(){
   document.getElementById('qCName').textContent=cn;
   var det=[];if(cp)det.push('\ub2f4\ub2f9: '+cp);if(ct)det.push('TEL: '+ct);if(ce)det.push(ce);
   document.getElementById('qCDetail').innerHTML=det.join('<br>');
-  document.getElementById('qPay').textContent=pt;
-  document.getElementById('qNote').textContent=nt;
+  document.getElementById('qPay').innerHTML=pt?pt.replace(/\n/g,'<br>'):'&nbsp;';
+  document.getElementById('qNote').innerHTML=nt?nt.replace(/\n/g,'<br>'):'&nbsp;';
   document.getElementById('qValidity').textContent=vld;
 
   var tb=document.getElementById('qTbody');
@@ -577,12 +611,4 @@ if('serviceWorker' in navigator){
   });
   // 캐시 전체 삭제
   caches.keys().then(function(keys){
-    keys.forEach(function(k){caches.delete(k);});
-  });
-  navigator.serviceWorker.register('./sw.js', {scope: './'}).then(function(){
-    console.log('SW OK');
-  }).catch(function(e){console.log('SW err',e);});
-}
-</script>
-</body>
-</html>
+    ke
