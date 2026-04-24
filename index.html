@@ -111,7 +111,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
 .sr:last-child .vl{color:#fff;font-size:13px;font-weight:900}
 
 /* 결제조건/비고 */
-.ntit{font-size:9px;font-weight:800;letter-spacing:1.2px;color:#374151;text-transform:uppercase;margin-bottom:5px}
+.ntit{font-size:9px;font-weight:800;letter-spacing:1.2px;color:var(--t3);text-transform:uppercase;margin-bottom:5px}
 .nbox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--gr);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;white-space:pre-wrap;min-height:36px;font-weight:600}
 .paybox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;min-height:36px;margin-bottom:14px;font-weight:600}
 
@@ -160,36 +160,22 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
          border-top:5px solid #3aaa3a!important;
          -webkit-print-color-adjust:exact;print-color-adjust:exact;
          -webkit-font-smoothing:antialiased;font-weight:500}
-
-  /* TOTAL AMOUNT 가로 배치 유지 */
   .torow{display:flex!important;flex-direction:row!important;gap:12px!important;align-items:stretch!important}
   .tobox{flex:1!important}
   .badge{background:linear-gradient(145deg,#1a5bbf,#1478c8)!important;
          min-width:138px!important;display:flex!important;flex-direction:column!important;
          justify-content:center!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-
-  /* ★ 합계 박스 크기 고정 - 인쇄시 커지는 문제 해결 */
+  thead th{background:#1a5bbf!important;color:#fff!important;
+           -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sr:last-child{background:linear-gradient(135deg,#1a5bbf,#1478c8)!important;
+                 -webkit-print-color-adjust:exact;print-color-adjust:exact}
   .sumw{display:flex!important;justify-content:flex-end!important;margin-bottom:16px!important}
   .sumt{min-width:0!important;width:220px!important;font-size:12px!important;
         border:1.5px solid #cddaf0!important;border-radius:8px!important;overflow:hidden!important}
   .sr{display:flex!important;justify-content:space-between!important;
-      gap:18px!important;padding:6px 12px!important;
-      border-bottom:1px solid #eef3ff!important;font-size:12px!important}
-  .sr:last-child{border:none!important;padding:9px 12px!important;
-                 background:linear-gradient(135deg,#1a5bbf,#1478c8)!important;
-                 -webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .sr .lb2{font-size:12px!important;font-weight:700!important}
-  .sr .vl{font-size:12px!important;font-weight:800!important}
-  .sr:last-child .lb2{font-size:11px!important;color:rgba(255,255,255,.85)!important}
-  .sr:last-child .vl{font-size:13px!important;color:#fff!important;font-weight:900!important}
-
-  /* 색상 */
-  thead th{background:#1a5bbf!important;color:#fff!important;
-           -webkit-print-color-adjust:exact;print-color-adjust:exact}
-
-  /* 비고/결제조건 */
-  .nbox,.paybox{display:block!important;visibility:visible!important;
-                overflow:visible!important;min-height:36px!important}
+      gap:18px!important;padding:6px 12px!important;font-size:12px!important}
+  .sr:last-child{border:none!important;padding:9px 12px!important}
+  .nbox,.paybox{display:block!important;visibility:visible!important;overflow:visible!important;min-height:36px!important}
   .ntit{display:block!important;visibility:visible!important}
   .pb,.sumw,.pf{page-break-inside:avoid}
   @page{size:A4 portrait;margin:8mm}
@@ -295,7 +281,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
           <div class="ph-info">
             <strong>사업자번호:</strong> 127-14-48247 &nbsp;|&nbsp; <strong>대표:</strong> 최세환<br>
             경기도 양주시 은현면 운하로 104-1<br>
-            <strong>TEL:</strong> 031-877-8808 &nbsp;|&nbsp; <strong>FAX:</strong> 031-855-5335 &nbsp;|&nbsp; <a href="mailto:sehan8808@hanmail.net" style="color:#333;text-decoration:none;font-weight:600">sehan8808@hanmail.net</a>
+            <strong>TEL:</strong> 031-877-8808 &nbsp;|&nbsp; <strong>FAX:</strong> 031-855-5335 &nbsp;|&nbsp; sehan8808@hanmail.net
           </div>
           <div class="ph-badge">
             <div id="qMeta"><strong>No.</strong> SH-202604-001<br><strong>Date.</strong> 2026-04-06</div>
@@ -325,12 +311,13 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
               <th>No.</th><th>품명 / 규격</th>
               <th style="text-align:center">단위</th>
               <th style="text-align:center">수량</th>
+              <th style="text-align:center">박스수량</th>
               <th style="text-align:right">단가</th>
               <th style="text-align:right">금액</th>
             </tr>
           </thead>
           <tbody id="qTbody">
-            <tr><td colspan="6" style="text-align:center;color:#ccc;padding:20px;font-size:11px">좌측에서 품목을 추가해주세요</td></tr>
+            <tr><td colspan="7" style="text-align:center;color:#ccc;padding:20px;font-size:11px">좌측에서 품목을 추가해주세요</td></tr>
           </tbody>
         </table>
 
@@ -379,7 +366,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 var items=[],idc=0,sym='\u20a9';
 function printDoc(){render();setTimeout(function(){window.print();},200);}
@@ -412,7 +399,7 @@ window.onload=function(){
 
 function addItem(){
   idc++;
-  items.push({id:idc,name:'',spec:'',unit:'\uac1c',qty:1,price:0});
+  items.push({id:idc,name:'',spec:'',unit:'\uac1c',qty:1,boxQty:0,price:0});
   drawItems();render();
 }
 function delItem(id){
@@ -422,7 +409,7 @@ function delItem(id){
 function upd(id,field,val){
   for(var i=0;i<items.length;i++){
     if(items[i].id===id){
-      items[i][field]=(field==='qty'||field==='price')?(parseFloat(val)||0):val;
+      items[i][field]=(field==='qty'||field==='price'||field==='boxQty')?(parseFloat(val)||0):val;
       var el=document.querySelector('[data-id="'+id+'"] .isub');
       var cs=document.getElementById('currency');
       var sm=cs?SYMS[cs.value]||'\u20a9':'\u20a9';
@@ -448,6 +435,7 @@ function drawItems(){
     h+='<div class="ig2">';
     h+='<div><label class="lb">\ub2e8\uc704</label><input class="inp" type="text" value="'+e(it.unit)+'" oninput="upd('+id+String.fromCharCode(44)+"'unit'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='<div><label class="lb">\uc218\ub7c9</label><input class="inp" type="number" value="'+it.qty+'" min="0" oninput="upd('+id+String.fromCharCode(44)+"'qty'"+String.fromCharCode(44)+'this.value)"></div>';
+    h+='<div><label class="lb">\ubc15\uc2a4\uc218\ub7c9</label><input class="inp" type="number" value="'+(it.boxQty||0)+'" min="0" placeholder="0" oninput="upd('+id+String.fromCharCode(44)+"'boxQty'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='</div>';
     h+='<label class="lb">\ub2e8\uac00</label>';
     h+='<input class="inp" type="number" value="'+it.price+'" min="0" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
@@ -480,14 +468,14 @@ function render(){
 
   var tb=document.getElementById('qTbody');
   if(!items.length){
-    tb.innerHTML='<tr><td colspan="6" style="text-align:center;color:#ccc;padding:20px;font-size:11px">\uc88c\uce21\uc5d0\uc11c \ud488\ubaa9\uc744 \ucd94\uac00\ud574\uc8fc\uc138\uc694</td></tr>';
+    tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:#ccc;padding:20px;font-size:11px">\uc88c\uce21\uc5d0\uc11c \ud488\ubaa9\uc744 \ucd94\uac00\ud574\uc8fc\uc138\uc694</td></tr>';
   }else{
     var h='';
     for(var i=0;i<items.length;i++){
       var it=items[i];
       h+='<tr><td class="tno">'+(i+1)+'</td>';
       h+='<td><div class="tnm">'+(it.name||'\ubbf8\uc785\ub825')+'</div>'+(it.spec?'<div class="tsp">'+it.spec+'</div>':'')+'</td>';
-      h+='<td class="tc">'+it.unit+'</td><td class="tc">'+comma(it.qty)+'</td>';
+      h+='<td class="tc">'+it.unit+'</td><td class="tc">'+comma(it.qty)+'</td><td class="tc">'+(it.boxQty?comma(it.boxQty):'-')+'</td>';
       h+='<td style="text-align:right;color:var(--t2)">'+sym+' '+comma(it.price)+'</td>';
       h+='<td>'+sym+' '+comma(it.qty*it.price)+'</td></tr>';
     }
@@ -611,4 +599,12 @@ if('serviceWorker' in navigator){
   });
   // 캐시 전체 삭제
   caches.keys().then(function(keys){
-    ke
+    keys.forEach(function(k){caches.delete(k);});
+  });
+  navigator.serviceWorker.register('./sw.js', {scope: './'}).then(function(){
+    console.log('SW OK');
+  }).catch(function(e){console.log('SW err',e);});
+}
+</script>
+</body>
+</html>
