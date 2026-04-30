@@ -363,6 +363,7 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 var items=[],idc=0,sym='\u20a9';
+function printDoc(){render();setTimeout(function(){window.print();},200);}
 var SYMS={'KRW':'\u20a9','USD':'$','CNY':'\u00a5','JPY':'\u00a5','EUR':'\u20ac'};
 
 function pad(n){return n<10?'0'+n:''+n;}
