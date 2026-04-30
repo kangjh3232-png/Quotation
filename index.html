@@ -66,10 +66,10 @@ body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4
 /* 견적서 헤더 */
 .ph{background:#fff;border-bottom:2px solid var(--bd);padding:20px 32px 0}
 .ph-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
-.ph-info{font-size:10px;color:#333;line-height:2;font-weight:600}
+.ph-info{font-size:15px;color:var(--t3);line-height:2}
 .ph-info strong{color:var(--t2);font-weight:700}
 .ph-badge{background:var(--lt);border:1.5px solid var(--bd);border-radius:8px;padding:8px 14px;text-align:right;flex-shrink:0}
-.ph-badge div{font-size:11px;color:#111;line-height:2;font-weight:700}
+.ph-badge div{font-size:16.5px;color:var(--t2);line-height:2}
 .ph-badge strong{color:var(--bl);font-weight:700}
 .ph-title{text-align:center;font-size:36px;font-weight:900;letter-spacing:14px;color:var(--bl);padding:16px 0 18px;border-top:1px solid var(--bd);-webkit-text-stroke:.5px var(--bl)}
 
@@ -77,9 +77,9 @@ body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4
 .pb{padding:20px 32px;flex:1}
 .torow{display:flex;gap:12px;margin-bottom:18px;align-items:stretch}
 .tobox{flex:1;border:1.5px solid var(--bd);border-radius:9px;padding:12px 15px;background:#fafcff;border-left:4px solid var(--bl)}
-.tolbl{font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--t3);margin-bottom:5px;text-transform:uppercase}
+.tolbl{font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--t3);margin-bottom:5px;text-transform:uppercase}
 .tonm{font-size:16px;font-weight:800;margin-bottom:3px}
-.todt{font-size:11px;color:#111;line-height:1.9;font-weight:600}
+.todt{font-size:16.5px;color:var(--t2);line-height:1.9}
 .badge{background:linear-gradient(145deg,var(--bl),#1478c8);color:#fff;border-radius:9px;padding:12px 18px;text-align:center;min-width:138px;display:flex;flex-direction:column;justify-content:center}
 .badge-lb{font-size:9px;color:rgba(255,255,255,.6);letter-spacing:1px;margin-bottom:3px}
 .badge-am{font-size:19px;font-weight:900;color:#fff}
@@ -88,38 +88,38 @@ body{font-family:'맑은 고딕','Malgun Gothic',Arial,sans-serif;background:#e4
 .dv{height:1px;background:linear-gradient(90deg,var(--bl),var(--gr),transparent);margin-bottom:16px;opacity:.25}
 
 /* 테이블 */
-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px}
-thead th{padding:8px 10px;font-size:10px;font-weight:800;text-align:left;background:var(--bl);color:rgba(255,255,255,.95)}
+table{width:100%;border-collapse:collapse;font-size:18px;margin-bottom:14px}
+thead th{padding:10px 10px;font-size:15px;font-weight:800;text-align:left;background:var(--bl);color:rgba(255,255,255,.95)}
 thead th:first-child{border-radius:6px 0 0 6px}
 thead th:last-child{border-radius:0 6px 6px 0;text-align:right}
 tbody tr{border-bottom:1px solid #eef3ff}
 tbody td{padding:9px 10px;vertical-align:middle;font-weight:600;color:#111}
 tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
-.tno{color:var(--t3);font-size:10px;width:26px}
-.tnm{font-weight:800;font-size:12px;color:#000}
-.tsp{color:#555;font-size:10px;margin-top:1px;font-weight:600}
+.tno{color:var(--t3);font-size:15px;width:26px}
+.tnm{font-weight:800;font-size:18px}
+.tsp{color:#555;font-size:15px;margin-top:1px}
 .tc{text-align:center!important;color:var(--t2)}
 
 /* 합계 */
 .sumw{display:flex;justify-content:flex-end;margin-bottom:16px}
-.sumt{min-width:210px;border:1.5px solid var(--bd);border-radius:8px;overflow:hidden;font-size:12px}
+.sumt{min-width:210px;border:1.5px solid var(--bd);border-radius:8px;overflow:hidden;font-size:18px}
 .sr{display:flex;justify-content:space-between;gap:18px;padding:6px 12px;border-bottom:1px solid #eef3ff}
 .sr:last-child{border:none;background:linear-gradient(135deg,var(--bl),#1478c8);padding:9px 12px}
 .sr .lb2{color:#111;font-weight:700}
 .sr .vl{font-weight:800;color:#000}
-.sr:last-child .lb2{color:rgba(255,255,255,.85);font-size:11px}
-.sr:last-child .vl{color:#fff;font-size:13px;font-weight:900}
+.sr:last-child .lb2{color:rgba(255,255,255,.75);font-size:16.5px}
+.sr:last-child .vl{color:#fff;font-size:19.5px;font-weight:900}
 
 /* 결제조건/비고 */
-.ntit{font-size:9px;font-weight:800;letter-spacing:1.2px;color:var(--t3);text-transform:uppercase;margin-bottom:5px}
-.nbox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--gr);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;white-space:pre-wrap;min-height:36px;font-weight:600}
-.paybox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:9px 12px;font-size:11px;color:#111;line-height:1.9;min-height:36px;margin-bottom:14px;font-weight:600}
+.ntit{font-size:13.5px;font-weight:800;letter-spacing:1.2px;color:var(--t3);text-transform:uppercase;margin-bottom:5px}
+.nbox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--gr);border-radius:0 6px 6px 0;padding:9px 12px;font-size:16.5px;color:var(--t2);line-height:1.9;white-space:pre-wrap;min-height:36px}
+.paybox{background:var(--lt);border:1.5px solid var(--bd);border-left:3px solid var(--bl);border-radius:0 6px 6px 0;padding:9px 12px;font-size:16.5px;color:var(--t2);line-height:1.9;min-height:36px;margin-bottom:14px}
 
 /* 하단 */
 .pf{display:flex;justify-content:space-between;align-items:flex-end;padding:14px 32px 20px;margin-top:auto;border-top:1px solid var(--bd);background:linear-gradient(180deg,#fff,#f8faff)}
-.pfv{font-size:10px;color:#333;line-height:2;font-weight:600}
-.pfv strong{color:#111;font-size:11px;font-weight:800}
-.pfv .pfnote{font-size:9.5px;color:#444;display:block;margin-top:2px;font-weight:600}
+.pfv{font-size:15px;color:var(--t3);line-height:2}
+.pfv strong{color:var(--t2);font-size:16.5px}
+.pfv .pfnote{font-size:14.2px;color:var(--t3);display:block;margin-top:2px}
 .pf-logo{height:96px;width:auto;opacity:.85}
 
 /* 플로팅 합계 */
@@ -155,25 +155,15 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .wrap{display:block}
   .prev{padding:0;background:#fff!important;display:block}
-  .paper{width:210mm!important;min-height:auto!important;box-shadow:none!important;
-         margin:0!important;transform:none!important;
-         border-top:5px solid #3aaa3a!important;
-         -webkit-print-color-adjust:exact;print-color-adjust:exact;
-         -webkit-font-smoothing:antialiased;font-weight:500}
+  .paper{width:210mm!important;min-height:auto!important;box-shadow:none!important;margin:0!important;transform:none!important;border-top:5px solid #3aaa3a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-font-smoothing:antialiased;font-weight:500}
   .torow{display:flex!important;flex-direction:row!important;gap:12px!important;align-items:stretch!important}
   .tobox{flex:1!important}
-  .badge{background:linear-gradient(145deg,#1a5bbf,#1478c8)!important;
-         min-width:138px!important;display:flex!important;flex-direction:column!important;
-         justify-content:center!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  thead th{background:#1a5bbf!important;color:#fff!important;
-           -webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .sr:last-child{background:linear-gradient(135deg,#1a5bbf,#1478c8)!important;
-                 -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .badge{background:linear-gradient(145deg,#1a5bbf,#1478c8)!important;min-width:138px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  thead th{background:#1a5bbf!important;color:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sr:last-child{background:linear-gradient(135deg,#1a5bbf,#1478c8)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .sumw{display:flex!important;justify-content:flex-end!important;margin-bottom:16px!important}
-  .sumt{min-width:0!important;width:220px!important;font-size:12px!important;
-        border:1.5px solid #cddaf0!important;border-radius:8px!important;overflow:hidden!important}
-  .sr{display:flex!important;justify-content:space-between!important;
-      gap:18px!important;padding:6px 12px!important;font-size:12px!important}
+  .sumt{min-width:0!important;width:220px!important;font-size:12px!important;border:1.5px solid #cddaf0!important;border-radius:8px!important;overflow:hidden!important}
+  .sr{display:flex!important;justify-content:space-between!important;gap:18px!important;padding:6px 12px!important;font-size:12px!important}
   .sr:last-child{border:none!important;padding:9px 12px!important}
   .nbox,.paybox{display:block!important;visibility:visible!important;overflow:visible!important;min-height:36px!important}
   .ntit{display:block!important;visibility:visible!important}
@@ -197,6 +187,10 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   .sumt{min-width:0;width:100%}
   .hb1{display:none}
 }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+input[type=number]{-moz-appearance:textfield;appearance:textfield}
 </style>
 </head>
 <body>
@@ -258,7 +252,7 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
       </div>
       <div class="trow"><span>부가세 (VAT 10%)</span><label class="tgl"><input type="checkbox" id="useVat" checked onchange="render()"><span class="tsl"></span></label></div>
       <div class="trow"><span>할인 적용</span><label class="tgl"><input type="checkbox" id="useDis" onchange="togDis()"><span class="tsl"></span></label></div>
-      <div id="disArea" style="display:none"><label class="lb">할인율 (%)</label><input class="inp" type="number" id="disRate" value="0" min="0" max="100" oninput="render()"></div>
+      <div id="disArea" style="display:none"><label class="lb">할인율 (%)</label><input class="inp" type="number" id="disRate" value="0" min="0" max="100" onwheel="event.preventDefault()" oninput="render()"></div>
     </div>
 
     <div class="sec">
@@ -369,7 +363,6 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 var items=[],idc=0,sym='\u20a9';
-function printDoc(){render();setTimeout(function(){window.print();},200);}
 var SYMS={'KRW':'\u20a9','USD':'$','CNY':'\u00a5','JPY':'\u00a5','EUR':'\u20ac'};
 
 function pad(n){return n<10?'0'+n:''+n;}
@@ -399,7 +392,7 @@ window.onload=function(){
 
 function addItem(){
   idc++;
-  items.push({id:idc,name:'',spec:'',unit:'\uac1c',qty:1,boxQty:0,price:0});
+  items.push({id:idc,name:'',spec:'',unit:'\uac1c',qty:1,price:0});
   drawItems();render();
 }
 function delItem(id){
@@ -434,11 +427,10 @@ function drawItems(){
     h+='<input class="inp" type="text" value="'+e(it.spec)+'" placeholder="PET 0.3T / 200x150mm" oninput="upd('+id+String.fromCharCode(44)+"'spec'"+String.fromCharCode(44)+'this.value)">';
     h+='<div class="ig2">';
     h+='<div><label class="lb">\ub2e8\uc704</label><input class="inp" type="text" value="'+e(it.unit)+'" oninput="upd('+id+String.fromCharCode(44)+"'unit'"+String.fromCharCode(44)+'this.value)"></div>';
-    h+='<div><label class="lb">\uc218\ub7c9</label><input class="inp" type="number" value="'+it.qty+'" min="0" oninput="upd('+id+String.fromCharCode(44)+"'qty'"+String.fromCharCode(44)+'this.value)"></div>';
-    h+='<div><label class="lb">\ubc15\uc2a4\uc218\ub7c9</label><input class="inp" type="number" value="'+(it.boxQty||0)+'" min="0" placeholder="0" oninput="upd('+id+String.fromCharCode(44)+"'boxQty'"+String.fromCharCode(44)+'this.value)"></div>';
+    h+='<div><label class="lb">\uc218\ub7c9</label><input class="inp" type="number" value="'+it.qty+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'qty'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='</div>';
     h+='<label class="lb">\ub2e8\uac00</label>';
-    h+='<input class="inp" type="number" value="'+it.price+'" min="0" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
+    h+='<input class="inp" type="number" value="'+it.price+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
     h+='<div class="isub">\uc18c\uacc4: '+sm+' '+comma(it.qty*it.price)+'</div>';
     h+='</div>';
   }
