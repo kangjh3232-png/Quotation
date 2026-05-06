@@ -431,7 +431,7 @@ function drawItems(){
     h+='<div><label class="lb">\uc218\ub7c9</label><input class="inp" type="number" value="'+it.qty+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'qty'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='</div>';
     h+='<label class="lb">\ub2e8\uac00</label>';
-    h+='<input class="inp" type="number" value="'+it.price+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
+    h+='<input class="inp" type="number" value="'+it.price+'" min="0" step="any" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
     h+='<div class="isub">\uc18c\uacc4: '+sm+' '+comma(it.qty*it.price)+'</div>';
     h+='</div>';
   }
@@ -552,7 +552,18 @@ function scalePaper(){
 }
 window.addEventListener('resize',scalePaper);
 function gv(id){var el=document.getElementById(id);return el?el.value.trim():'';}
-function comma(n){return Math.round(n).toLocaleString('ko-KR');}
+function comma(n){
+  if(n===null||n===undefined||n==='')return '';
+  var num=parseFloat(n);
+  if(isNaN(num))return '';
+  var cur=document.getElementById('currency');
+  var cv=cur?cur.value:'KRW';
+  if(cv==='KRW'||cv==='JPY'){
+    return Math.round(num).toLocaleString('ko-KR');
+  }
+  // 달러/위안/유로: 소수점 최대 2자리 (불필요한 0 제거)
+  return num.toLocaleString('ko-KR',{minimumFractionDigits:0,maximumFractionDigits:2});
+}
 function e(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 </script>
 
