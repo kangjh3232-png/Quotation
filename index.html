@@ -429,6 +429,7 @@ function drawItems(){
     h+='<div class="ig2">';
     h+='<div><label class="lb">\ub2e8\uc704</label><input class="inp" type="text" value="'+e(it.unit)+'" oninput="upd('+id+String.fromCharCode(44)+"'unit'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='<div><label class="lb">\uc218\ub7c9</label><input class="inp" type="number" value="'+it.qty+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'qty'"+String.fromCharCode(44)+'this.value)"></div>';
+    h+='<div><label class="lb">\ubc15\uc2a4\uc218\ub7c9</label><input class="inp" type="number" value="'+(it.boxQty||0)+'" min="0" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'boxQty'"+String.fromCharCode(44)+'this.value)"></div>';
     h+='</div>';
     h+='<label class="lb">\ub2e8\uac00</label>';
     h+='<input class="inp" type="number" value="'+it.price+'" min="0" step="any" onwheel="event.preventDefault()" oninput="upd('+id+String.fromCharCode(44)+"'price'"+String.fromCharCode(44)+'this.value)">';
@@ -468,7 +469,7 @@ function render(){
       var it=items[i];
       h+='<tr><td class="tno">'+(i+1)+'</td>';
       h+='<td><div class="tnm">'+(it.name||'\ubbf8\uc785\ub825')+'</div>'+(it.spec?'<div class="tsp">'+it.spec+'</div>':'')+'</td>';
-      h+='<td class="tc">'+it.unit+'</td><td class="tc">'+comma(it.qty)+'</td><td class="tc">'+(it.boxQty?comma(it.boxQty):'-')+'</td>';
+      h+='<td class="tc">'+it.unit+'</td><td class="tc">'+comma(it.qty)+'</td><td class="tc">'+(it.boxQty?comma(it.boxQty):'-')+'</td><td class="tc">'+(it.boxQty?comma(it.boxQty):'-')+'</td>';
       h+='<td style="text-align:right;color:var(--t2)">'+sym+' '+comma(it.price)+'</td>';
       h+='<td>'+sym+' '+comma(it.qty*it.price)+'</td></tr>';
     }
