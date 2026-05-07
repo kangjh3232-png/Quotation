@@ -302,12 +302,12 @@ input[type=number]{-moz-appearance:textfield;appearance:textfield}
         <table>
           <thead>
             <tr>
-              <th>No.</th><th>품명 / 규격</th>
-              <th style="text-align:center">단위</th>
-              <th style="text-align:center">수량</th>
-              <th style="text-align:right">단가</th>
-              <th style="text-align:right">금액</th>
-              <th style="text-align:center">박스수량</th>
+              <th style="width:4%">No.</th><th>품명 / 규격</th>
+              <th style="text-align:center;width:7%">단위</th>
+              <th style="text-align:center;width:7%">수량</th>
+              <th style="text-align:right;white-space:nowrap;width:12%">단가</th>
+              <th style="text-align:right;white-space:nowrap;width:13%">금액</th>
+              <th style="text-align:center;width:10%">박스수량</th>
             </tr>
           </thead>
           <tbody id="qTbody">
@@ -470,8 +470,8 @@ function render(){
       h+='<tr><td class="tno">'+(i+1)+'</td>';
       h+='<td><div class="tnm">'+(it.name||'\ubbf8\uc785\ub825')+'</div>'+(it.spec?'<div class="tsp">'+it.spec+'</div>':'')+'</td>';
       h+='<td class="tc">'+it.unit+'</td><td class="tc">'+comma(it.qty)+'</td>';
-      h+='<td style="text-align:right;color:var(--t2)">'+sym+' '+comma(it.price)+'</td>';
-      h+='<td>'+sym+' '+comma(it.qty*it.price)+'</td>';
+      h+='<td style="text-align:right;color:var(--t2);white-space:nowrap">'+sym+' '+comma(it.price)+'</td>';
+      h+='<td style="text-align:right;white-space:nowrap">'+sym+' '+comma(it.qty*it.price)+'</td>';
       h+='<td class="tc">'+(it.boxQty?comma(it.boxQty):'-')+'</td></tr>';
     }
     tb.innerHTML=h;
