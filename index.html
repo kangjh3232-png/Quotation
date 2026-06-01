@@ -167,8 +167,14 @@ tbody td:last-child{text-align:right;font-weight:700;color:var(--bl)}
   .sr:last-child{border:none!important;padding:9px 12px!important}
   .nbox,.paybox{display:block!important;visibility:visible!important;overflow:visible!important;min-height:36px!important}
   .ntit{display:block!important;visibility:visible!important}
-  .pb,.sumw,.pf{page-break-inside:avoid}
-  @page{size:A4 portrait;margin:8mm}
+  /* 페이지 나눔 규칙 */
+  .pb{page-break-inside:auto}
+  .sumw,.pf{page-break-inside:avoid;page-break-before:avoid}
+  .ph{page-break-inside:avoid;page-break-after:avoid}
+  thead{display:table-header-group}
+  tr{page-break-inside:avoid;page-break-after:auto}
+  td,th{page-break-inside:avoid}
+  @page{size:A4 portrait;margin:10mm 8mm}
 }
 
 /* 모바일 */
@@ -658,11 +664,4 @@ document.getElementById('iBtnNo').addEventListener('click',function(){
   document.getElementById('iBanner').style.display='none';
 });
 if('serviceWorker' in navigator){
-  caches.keys().then(function(keys){keys.forEach(function(k){caches.delete(k);});});
-  navigator.serviceWorker.register('./sw.js',{scope:'./'}).then(function(){
-    console.log('SW OK');
-  }).catch(function(e){console.log('SW err',e);});
-}
-</script>
-</body>
-</html>
+  c
